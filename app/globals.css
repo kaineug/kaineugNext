@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050914;
+  --foreground: #f5f5f5;
 }
 
 @theme inline {
@@ -12,15 +12,107 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@theme {
+    --atkinson: "atkinsonHyper";
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #050914;
+    --foreground: #f5f5f5;
   }
 }
 
+/* @font-face { */
+/*   font-family: instrumentSerif; */
+/*   src: url("../public/fonts/Instrument_Serif/InstrumentSerif-Regular.ttf"); */
+/* } */
+/* @font-face { */
+/*   font-family: nitti; */
+/*   src: url("../public/fonts/nitti/Nitti-Normal.ttf"); */
+/* } */
+/* @font-face { */
+/*   font-family: iAWriterMono; */
+/*   src: url("../public/fonts/iAWriterMono/iAWriterMonoS-Regular.woff2"); */
+/* } */
+@font-face {
+  font-family: atkinsonHyper;
+  src: url("/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf");
+}
+@view-transition {
+    navigation: auto;
+}
+/* * { */
+/*     margin: 0; */
+/*     padding: 0; */
+/*     box-sizing: border-box; */
+/* } */
+/**/
+/* ul, ol { */
+/*     list-style: none; */
+/* } */
+
+/* html, body { */
+/*     height: 100%; */
+/*     margin: 0; */
+/*     background-color: oklch(0.1412 0.0269 268.187); */
+/* } */
+
+/* html { */
+/*     background-color: oklch(0.1412 0.0269 268.187); */
+/* } */
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px auto;
+    max-width: 1100px;
+    line-height: 1.6;
+    padding: 0 10px;
+    /* margin-top: 1rem; */
+    /* padding-left: 16rem; */
+    /* padding-right: 16rem; */
+    /* padding-left: 12rem; */
+    /* padding-right: 12rem; */
+}
+
+ul {
+    max-width: 1050px;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+/* h2 { */
+/*     font-size: 3rem; */
+/* } */
+
+p {
+    font-size: 1.4rem;
+    font-family: var(--font-atkinson);
+}
+
+/* li { */
+/*     font-size: 3rem; */
+/* } */
+
+Link {
+    font-size: 3rem;
+}
+
+#connectLinks {
+    font-family: var(--font-atkinson);
+}
+
+#navbar {
+    font-size: 8rem;
 }
