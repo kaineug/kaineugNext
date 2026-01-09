@@ -30,10 +30,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   }
 
   return (
-    <article className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-      <div className="text-gray-600 mb-8">
-        {post.date} • {post.author}
+    <article className="mt-4 md:mt-8">
+      <h1 className="text-4xl mb-4 mt-12 md:mt-0" id="blogTitle">{post.title}</h1>
+      <div className="text-gray-400 text-xl mb-8">
+        {post.displayDate}
       </div>
       <MDXContent content={post.content} />
     </article>

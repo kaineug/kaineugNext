@@ -6,11 +6,23 @@ export interface PostMetadata {
     slug: string;
     title: string;
     date: string;
+    displayDate: string;
+    tags: string;
     excerpt: string;
 }
 
 export interface Post extends PostMetadata {
     content: string;
+}
+
+function formatDate(dateString: string): string {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    // Output: "Month 31, 2099"
 }
 
 export function getAllPosts(): PostMetadata[] {
@@ -30,7 +42,9 @@ export function getAllPosts(): PostMetadata[] {
             return {
                 slug,
                 title: data.title,
-                date: data.author,
+                date: data.date,
+                displayDate: formatDate(data.date),
+                tags: data.tags,
                 excerpt: data.excerpt,
             };
         });
@@ -70,6 +84,8 @@ export function getPostBySlug(slug: string): Post | null {
       slug,
       title: data.title,
       date: data.date,
+      displayDate: formatDate(data.date),
+      tags: data.tags,
       excerpt: data.excerpt,
       content,
     };
