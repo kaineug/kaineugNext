@@ -1,21 +1,17 @@
 @import "tailwindcss";
-
 :root {
   --background: #050914;
   --foreground: #f5f5f5;
 }
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-
 @theme {
     --atkinson: "atkinsonHyper";
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #050914;
@@ -23,18 +19,6 @@
   }
 }
 
-/* @font-face { */
-/*   font-family: instrumentSerif; */
-/*   src: url("../public/fonts/Instrument_Serif/InstrumentSerif-Regular.ttf"); */
-/* } */
-/* @font-face { */
-/*   font-family: nitti; */
-/*   src: url("../public/fonts/nitti/Nitti-Normal.ttf"); */
-/* } */
-/* @font-face { */
-/*   font-family: iAWriterMono; */
-/*   src: url("../public/fonts/iAWriterMono/iAWriterMonoS-Regular.woff2"); */
-/* } */
 @font-face {
   font-family: atkinsonHyper;
   src: url("/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf");
@@ -42,25 +26,28 @@
 @view-transition {
     navigation: auto;
 }
-/* * { */
-/*     margin: 0; */
-/*     padding: 0; */
-/*     box-sizing: border-box; */
-/* } */
-/**/
-/* ul, ol { */
-/*     list-style: none; */
-/* } */
 
-/* html, body { */
-/*     height: 100%; */
-/*     margin: 0; */
-/*     background-color: oklch(0.1412 0.0269 268.187); */
-/* } */
+/* Add these lines to fix the background */
+html {
+    height: 100%;
+    background: var(--background);
+}
 
-/* html { */
-/*     background-color: oklch(0.1412 0.0269 268.187); */
-/* } */
+body {
+    min-height: 100%; /* Changed from implicit height */
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px auto;
+    max-width: 1100px;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* If using Next.js app router, you might also need this */
+#__next {
+    min-height: 100vh;
+}
 
 p {
   text-wrap: pretty;
@@ -69,33 +56,14 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
-body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 10px auto;
-    max-width: 1100px;
-    line-height: 1.6;
-    padding: 0 10px;
-    /* margin-top: 1rem; */
-    /* padding-left: 16rem; */
-    /* padding-right: 16rem; */
-    /* padding-left: 12rem; */
-    /* padding-right: 12rem; */
-}
-
 ul {
     max-width: 1050px;
 }
-
 ol {
     font-size: 1.4rem;
     font-family: var(--font-atkinson);
     padding: 1.6px;
-
-
 }
-
 h1 {
     font-size: 6rem;
 }
@@ -111,30 +79,24 @@ h4 {
 h5 {
     font-size: 2rem;
 }
-
 p {
     font-size: 1.4rem;
     font-family: var(--font-atkinson);
     padding: 1.6px;
 }
-
 Link {
     font-size: 3rem;
 }
-
 ::selection {
     color: black;
     background-color: lightblue;
 }
-
 #connectLinks {
     font-family: var(--font-atkinson);
 }
-
 #navbar {
     font-size: 8rem;
 }
-
 @media only screen and (max-width: 800px) {
     h1 {
         font-size: 4rem;
