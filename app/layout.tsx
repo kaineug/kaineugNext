@@ -55,7 +55,7 @@ export default function RootLayout({
             <Navbar />
             {children}
             <Script
-                defer src="http://192.168.68.56:3001/script.js"
+                defer src="https://analytics.kaineug.de/script.js"
                 data-website-id="08ac5a24-b266-42b6-890d-d60770212b8c"
                 strategy="afterInteractive"
             />
