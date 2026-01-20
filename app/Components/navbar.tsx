@@ -24,7 +24,7 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li className="flex-none">
-                    <Link href="/collection" className={isActive("/collection")}>
+                    <Link href="/marked" className={isActive("/marked")}>
                         marked
                     </Link>
                 </li>

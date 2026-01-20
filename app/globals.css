@@ -88,25 +88,43 @@ ul {
     max-width: 1050px;
 }
 
+ol {
+    font-size: 1.4rem;
+    font-family: var(--font-atkinson);
+    padding: 1.6px;
+
+
+}
+
 h1 {
     font-size: 6rem;
 }
-
-/* h2 { */
-/*     font-size: 3rem; */
-/* } */
+h2 {
+    font-size: 5rem;
+}
+h3 {
+    font-size: 4rem;
+}
+h4 {
+    font-size: 3rem;
+}
+h5 {
+    font-size: 2rem;
+}
 
 p {
     font-size: 1.4rem;
     font-family: var(--font-atkinson);
+    padding: 1.6px;
 }
-
-/* li { */
-/*     font-size: 3rem; */
-/* } */
 
 Link {
     font-size: 3rem;
+}
+
+::selection {
+    color: black;
+    background-color: lightblue;
 }
 
 #connectLinks {
