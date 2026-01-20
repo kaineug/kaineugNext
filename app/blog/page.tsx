@@ -1,4 +1,3 @@
-import BlogpostPreview from "../Components/articlePreview";
 import Link from "next/link";
 import { getAllPosts } from "./lib/posts";
 
@@ -8,8 +7,8 @@ export default function BlogPage() {
     return (
         <div>
             <h1>blog</h1>
-            <p className="pb-1">this is my little blog. i will from time to time publish posts about topics that interest me on this page.</p>
-            <p className="pb-1">the topic will vary, though there will be likely a focus on tech. i'll try to cover other topics like music, general life stuff, or maybe if i feel icky about a certain topic that involves politics, than i might share my thoughts about that as well.</p>
+            <p className="pb-1">from time to time i will publish posts about topics that interest me.</p>
+            <p className="pb-1">the topics will vary, though there will be likely a focus on tech. i'll try to cover other topics like music, games or general life stuff. if i feel icky about a certain topic i might publish a post that involves politics.</p>
 
             <div className="space-y-6">
                 {posts.map((post) => (

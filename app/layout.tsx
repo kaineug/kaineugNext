@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
 import Navbar from "./Components/navbar";
+import Script from "next/script";
 
 const insSerif = localFont ({
     src: '../public/fonts/Instrument_Serif/InstrumentSerif-Regular.ttf',
@@ -53,6 +54,11 @@ export default function RootLayout({
         <body className={`${insSerif.className}`}>
             <Navbar />
             {children}
+            <Script
+                defer src="http://192.168.68.56:3001/script.js"
+                data-website-id="08ac5a24-b266-42b6-890d-d60770212b8c"
+                strategy="afterInteractive"
+            />
         </body>
     </html>
   );
